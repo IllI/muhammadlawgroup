@@ -178,6 +178,22 @@
         submitButton.textContent = 'Sending...';
       }
 
+      // Include checkbox values in form data
+      const marketingConsent = form.querySelector('input[name="marketingConsent"]');
+      const nonMarketingConsent = form.querySelector('input[name="nonMarketingConsent"]');
+      
+      if (marketingConsent && marketingConsent.checked) {
+        formData.set('marketingConsent', 'yes');
+      } else {
+        formData.set('marketingConsent', 'no');
+      }
+      
+      if (nonMarketingConsent && nonMarketingConsent.checked) {
+        formData.set('nonMarketingConsent', 'yes');
+      } else {
+        formData.set('nonMarketingConsent', 'no');
+      }
+
       // Submit form via AJAX
       fetch(form.action, {
         method: 'POST',

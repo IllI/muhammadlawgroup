@@ -242,15 +242,15 @@
             <div class="container">
                 <div class="attorney-content">
                     <div class="attorney-photo">
-                        <img src="img/team/attorney.svg" alt="Muhammad Ali, Esq." loading="lazy">
+                        <img src="img/team/1.jpg" alt="Khaliyq Muhammad" loading="lazy">
                     </div>
                     <div class="attorney-bio">
-                        <h2 id="attorney-heading">Muhammad Ali, Esq.</h2>
+                        <h2 id="attorney-heading">Khaliyq Muhammad</h2>
                     <p class="attorney-title">Founder & Managing Attorney</p>
-                    <p>Muhammad Ali is a dedicated legal professional with extensive experience across multiple practice areas. With a passion for justice and a commitment to client advocacy, he founded Muhammad Law Group to provide comprehensive legal services that address the diverse needs of individuals, families, and businesses.</p>
-                    <p>Throughout his career, Muhammad has successfully represented clients in complex immigration matters, estate planning, intellectual property disputes, business transactions, and real estate law. His approach combines strategic thinking with compassionate counsel, ensuring clients receive both aggressive representation and personalized attention.</p>
-                    <p>Muhammad earned his Juris Doctor from a prestigious law school and is licensed to practice in multiple jurisdictions. He is an active member of several professional legal associations and regularly contributes to legal publications on topics ranging from immigration reform to business compliance strategies.</p>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="btn-linkedin" aria-label="Connect with Muhammad Ali on LinkedIn">
+                    <p>Mr. Khaliyq Muhammad earned his J.D. with certificates in intellectual property and international and comparative law at Chicago-Kent College of Law. He is licensed to practice law in the State of Illinois and holds an M.S. in Intellectual Property Management & Markets from Illinois Institute of Technology.</p>
+                    <p>With extensive experience in intellectual property law, Mr. Muhammad has helped execute trademark, copyright, patent, and domain name transactions across various industries. He has assisted organizations of all sizes in obtaining, defending, and enforcing patents, trademarks, and copyrights. His practice spans intellectual property law, entertainment law, business law, family law, real estate law, and international law.</p>
+                    <p>Before founding Muhammad Law LLC, Mr. Muhammad worked at Intellectual Property Exchange International (IPXI), the world's first financial exchange for licensing and trading intellectual property rights, where he was responsible for valuation and modeling of intellectual property contract offerings, asset pricing, and market analysis.</p>
+                        <a href="https://www.linkedin.com/in/khaliyq-muhammad-0173343/" target="_blank" rel="noopener" class="btn-linkedin" aria-label="Connect with Khaliyq Muhammad on LinkedIn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                             Connect on LinkedIn
                         </a>
@@ -352,6 +352,19 @@
                                 <label for="message">Message *</label>
                                 <div class="error-message" role="alert" aria-live="polite"></div>
                             </div>
+                            <div class="consent-checkboxes">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="marketingConsent" name="marketingConsent" value="yes">
+                                    <label for="marketingConsent">I consent to receive marketing text messages from Muhammad Law LLC at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="nonMarketingConsent" name="nonMarketingConsent" value="yes">
+                                    <label for="nonMarketingConsent">I consent to receive non-marketing text messages from Muhammad Law LLC about my order updates, appointment reminders etc. Message & data rates may apply.</label>
+                                </div>
+                            </div>
+                            <div class="legal-links">
+                                <a href="terms-of-service.html" target="_blank">Terms of Service</a> & <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                            </div>
                             <p class="disclaimer">Submitting this form does not create an attorney-client relationship</p>
                             <button type="submit" class="btn btn-primary">Send Message</button>
                             <div class="form-status" role="status" aria-live="polite"></div>
@@ -366,6 +379,11 @@
     <footer class="footer" role="contentinfo">
         <div class="container">
             <p>&copy; 2024 Muhammad Law Group. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
@@ -386,6 +404,19 @@
                 <div class="form-group">
                     <textarea id="chatMessage" name="message" rows="4" required aria-required="true"></textarea>
                     <label for="chatMessage">Message *</label>
+                </div>
+                <div class="consent-checkboxes">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="chatMarketingConsent" name="marketingConsent" value="yes">
+                        <label for="chatMarketingConsent">I consent to receive marketing text messages from Muhammad Law LLC at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="chatNonMarketingConsent" name="nonMarketingConsent" value="yes">
+                        <label for="chatNonMarketingConsent">I consent to receive non-marketing text messages from Muhammad Law LLC about my order updates, appointment reminders etc. Message & data rates may apply.</label>
+                    </div>
+                </div>
+                <div class="legal-links">
+                    <a href="terms-of-service.html" target="_blank">Terms of Service</a> & <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
