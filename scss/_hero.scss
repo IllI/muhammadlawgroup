@@ -1,0 +1,134 @@
+// Hero Section Styles
+
+.hero {
+  position: relative;
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba($mlg-navy, 0.95) 0%, rgba($mlg-navy, 0.85) 100%),
+              url('../img/hero/hero-bg.jpg') center center / cover no-repeat;
+  color: $white;
+  padding: $spacing-xxl $spacing-md;
+  margin-top: 40px; // Account for staging banner
+  
+  // Text overlay with proper contrast
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($mlg-navy, 0.3);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: $content-max-width;
+    text-align: center;
+  }
+  
+  .hero-headline {
+    font-size: 72px;
+    font-family: $font-serif;
+    color: $white;
+    margin-bottom: $spacing-md;
+    line-height: $line-height-heading;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-subtitle {
+    font-size: $font-size-large;
+    color: $white;
+    margin-bottom: $spacing-lg;
+    line-height: 1.5;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-cta-group {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    .btn {
+      padding: $spacing-md $spacing-lg;
+      font-size: $font-size-large;
+      font-weight: 600;
+      min-width: 220px;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: $shadow-lg;
+      }
+    }
+    
+    .btn-primary {
+      background-color: $mlg-gold;
+      color: $mlg-navy;
+      border-color: $mlg-gold;
+      
+      &:hover {
+        background-color: darken($mlg-gold, 10%);
+        color: $mlg-navy;
+      }
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: $white;
+      border: 2px solid $white;
+      
+      &:hover {
+        background-color: $white;
+        color: $mlg-navy;
+      }
+    }
+  }
+}
+
+// Responsive styles for mobile
+@media (max-width: $breakpoint-mobile) {
+  .hero {
+    min-height: 500px;
+    height: auto;
+    padding: $spacing-xl $spacing-sm;
+    
+    .hero-headline {
+      font-size: 32px;
+    }
+    
+    .hero-subtitle {
+      font-size: $font-size-base;
+      margin-bottom: $spacing-md;
+    }
+    
+    .hero-cta-group {
+      flex-direction: column;
+      gap: $spacing-sm;
+      
+      .btn {
+        width: 100%;
+        min-width: auto;
+        padding: $spacing-sm $spacing-md;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+// Tablet responsive
+@media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+  .hero {
+    .hero-headline {
+      font-size: 48px;
+    }
+  }
+}

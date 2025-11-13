@@ -1,0 +1,33 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b2545;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a3a5f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements representing legal/professional theme -->
+  <g opacity="0.15">
+    <!-- Scale of justice symbol -->
+    <circle cx="300" cy="200" r="120" fill="none" stroke="#d2a649" stroke-width="3"/>
+    <line x1="300" y1="140" x2="300" y2="260" stroke="#d2a649" stroke-width="4"/>
+    <line x1="240" y1="160" x2="360" y2="160" stroke="#d2a649" stroke-width="4"/>
+    <circle cx="240" cy="160" r="30" fill="none" stroke="#d2a649" stroke-width="3"/>
+    <circle cx="360" cy="160" r="30" fill="none" stroke="#d2a649" stroke-width="3"/>
+  </g>
+  
+  <!-- Accent shapes -->
+  <circle cx="480" cy="80" r="40" fill="#d2a649" opacity="0.2"/>
+  <circle cx="120" cy="320" r="50" fill="#d2a649" opacity="0.15"/>
+  
+  <!-- Text overlay -->
+  <text x="300" y="200" font-family="serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0.9">
+    Muhammad Law
+  </text>
+  <text x="300" y="235" font-family="sans-serif" font-size="18" fill="#d2a649" text-anchor="middle" opacity="0.9">
+    Excellence in Legal Service
+  </text>
+</svg>

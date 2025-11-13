@@ -1,0 +1,576 @@
+// Sections Stylesheet
+// Styles for About, Why Choose, Attorney Spotlight, and Contact sections
+
+// Container
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+// About Section
+.about {
+  background-color: $white;
+  padding: $spacing-xxl 0;
+  
+  h2 {
+    font-family: $font-serif;
+    font-size: $font-size-h2;
+    color: $mlg-navy;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .about-content {
+    max-width: $content-max-width;
+    margin: 0 auto;
+    
+    p {
+      font-family: $font-sans;
+      font-size: $font-size-large;
+      line-height: $line-height-base;
+      color: $charcoal;
+      margin-bottom: $spacing-md;
+      text-align: left;
+    }
+    
+    .learn-more-link {
+      display: inline-block;
+      color: $mlg-gold;
+      font-weight: 600;
+      font-size: $font-size-base;
+      margin-top: $spacing-sm;
+      transition: color $transition-fast;
+      
+      &:hover {
+        color: darken($mlg-gold, 10%);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Why Choose Section
+.why-choose {
+  background-color: $mlg-navy;
+  padding: $spacing-xxl 0;
+  
+  .why-choose-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: $spacing-xl;
+    align-items: center;
+  }
+  
+  .differentiators {
+    h2 {
+      font-family: $font-serif;
+      font-size: $font-size-h2;
+      color: $white;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .differentiator-item {
+      margin-bottom: $spacing-lg;
+      
+      h3 {
+        font-size: $font-size-h4;
+        color: $white;
+        margin-bottom: $spacing-sm;
+      }
+      
+      p {
+        font-family: $font-sans;
+        font-size: $font-size-base;
+        color: $white;
+        line-height: $line-height-base;
+        margin-bottom: $spacing-md;
+      }
+      
+      .divider {
+        width: 60px;
+        height: 3px;
+        background-color: $mlg-gold;
+        margin-top: $spacing-md;
+      }
+    }
+  }
+  
+  .feature-image {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+// Attorney Spotlight Section
+.attorney-spotlight {
+  background-color: $white;
+  padding: $spacing-xxl 0;
+  
+  .attorney-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: $spacing-xl;
+    align-items: center;
+  }
+  
+  .attorney-photo {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: $shadow-lg;
+    }
+  }
+  
+  .attorney-bio {
+    padding: $spacing-lg;
+    
+    h2 {
+      font-family: $font-serif;
+      font-size: $font-size-h2;
+      color: $mlg-navy;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .attorney-title {
+      font-size: $font-size-large;
+      color: $mlg-gold;
+      font-weight: 600;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      font-family: $font-sans;
+      font-size: $font-size-base;
+      color: $charcoal;
+      line-height: $line-height-base;
+      margin-bottom: $spacing-md;
+    }
+    
+    .btn-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: $spacing-xs;
+      background-color: $mlg-gold;
+      color: $mlg-navy;
+      padding: $spacing-sm $spacing-md;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all $transition-fast;
+      
+      &:hover {
+        background-color: darken($mlg-gold, 10%);
+        transform: translateY(-2px);
+        box-shadow: $shadow-md;
+      }
+    }
+  }
+}
+
+// Contact Section
+.contact {
+  background-color: $mlg-navy;
+  padding: $spacing-xxl 0;
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+  }
+  
+  .office-info {
+    h2 {
+      font-family: $font-serif;
+      font-size: $font-size-h2;
+      color: $white;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .office-intro {
+      font-size: $font-size-base;
+      color: $white;
+      margin-bottom: $spacing-lg;
+      line-height: $line-height-base;
+    }
+    
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: $spacing-sm;
+      margin-bottom: $spacing-md;
+      
+      .icon {
+        color: $mlg-gold;
+        font-size: $font-size-h4;
+        flex-shrink: 0;
+        margin-top: 2px;
+        
+        svg {
+          display: block;
+        }
+      }
+      
+      .info-text {
+        h4 {
+          font-size: $font-size-base;
+          font-weight: 600;
+          color: $white;
+          margin-bottom: $spacing-xs;
+        }
+        
+        p {
+          font-size: $font-size-base;
+          color: $white;
+          margin: 0;
+          line-height: 1.5;
+        }
+        
+        a {
+          color: $mlg-gold;
+          transition: color $transition-fast;
+          
+          &:hover {
+            color: lighten($mlg-gold, 10%);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .contact-form-wrapper {
+    background-color: $white;
+    padding: $spacing-lg;
+    border-radius: 8px;
+    box-shadow: $shadow-md;
+    
+    h3 {
+      font-family: $font-serif;
+      font-size: $font-size-h3;
+      color: $mlg-navy;
+      margin-bottom: $spacing-md;
+    }
+    
+    form {
+      .form-group {
+        position: relative;
+        margin-bottom: $spacing-md;
+        
+        label {
+          position: absolute;
+          top: 12px;
+          left: 0;
+          font-size: $font-size-base;
+          color: #999;
+          pointer-events: none;
+          transition: all $transition-fast;
+        }
+        
+        input,
+        textarea,
+        select {
+          width: 100%;
+          padding: 12px 0;
+          font-size: $font-size-base;
+          font-family: $font-sans;
+          color: $charcoal;
+          border: none;
+          border-bottom: 2px solid #ddd;
+          background-color: transparent;
+          outline: none;
+          transition: border-color $transition-fast;
+          
+          &:focus {
+            border-bottom-color: $mlg-gold;
+            
+            ~ label {
+              top: -18px;
+              font-size: $font-size-small;
+              color: $mlg-gold;
+            }
+          }
+          
+          &:not(:placeholder-shown) ~ label,
+          &:valid ~ label {
+            top: -18px;
+            font-size: $font-size-small;
+            color: $mlg-navy;
+          }
+        }
+        
+        select {
+          cursor: pointer;
+          appearance: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right 8px center;
+          padding-right: 30px;
+          
+          &:not([value=""]) ~ label,
+          &:focus ~ label {
+            top: -18px;
+            font-size: $font-size-small;
+            color: $mlg-navy;
+          }
+        }
+        
+        textarea {
+          resize: vertical;
+          min-height: 100px;
+          padding-top: 20px;
+        }
+        
+        .error-message {
+          font-size: $font-size-small;
+          color: $error-red;
+          margin-top: $spacing-xs;
+          display: none;
+          
+          &.active {
+            display: block;
+          }
+        }
+        
+        &.has-error {
+          input,
+          textarea,
+          select {
+            border-bottom-color: $error-red;
+          }
+          
+          label {
+            color: $error-red;
+          }
+        }
+      }
+      
+      .btn {
+        width: 100%;
+        padding: $spacing-sm $spacing-md;
+        font-size: $font-size-base;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all $transition-fast;
+        
+        &.btn-primary {
+          background-color: $mlg-gold;
+          color: $mlg-navy;
+          
+          &:hover {
+            background-color: darken($mlg-gold, 10%);
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+          }
+          
+          &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+          }
+        }
+      }
+    }
+    
+    .disclaimer {
+      font-size: $font-size-small;
+      color: #666;
+      font-style: italic;
+      margin-top: $spacing-md;
+      margin-bottom: $spacing-md;
+      text-align: center;
+    }
+    
+    .form-status {
+      margin-top: $spacing-md;
+      padding: $spacing-sm;
+      border-radius: 4px;
+      display: none;
+      text-align: center;
+      font-size: $font-size-base;
+      
+      &.success {
+        display: block;
+        background-color: lighten($success-green, 40%);
+        color: darken($success-green, 20%);
+        border: 1px solid $success-green;
+      }
+      
+      &.error {
+        display: block;
+        background-color: lighten($error-red, 40%);
+        color: darken($error-red, 10%);
+        border: 1px solid $error-red;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: $mlg-navy;
+  color: $white;
+  padding: $spacing-lg 0;
+  text-align: center;
+  
+  p {
+    margin: 0;
+    font-size: $font-size-small;
+  }
+}
+
+// Modal
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: $z-modal;
+  align-items: center;
+  justify-content: center;
+  
+  &.active {
+    display: flex;
+  }
+  
+  .modal-content {
+    background-color: $white;
+    padding: $spacing-lg;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: $shadow-lg;
+    
+    h3 {
+      font-family: $font-serif;
+      font-size: $font-size-h3;
+      color: $mlg-navy;
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-sm;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: $charcoal;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    
+    &:hover {
+      color: $mlg-navy;
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: $breakpoint-mobile) {
+  // About Section
+  .about {
+    padding: $spacing-xl 0;
+    
+    h2 {
+      font-size: 28px;
+      margin-bottom: $spacing-md;
+    }
+    
+    .about-content {
+      p {
+        font-size: $font-size-base;
+      }
+    }
+  }
+  
+  // Why Choose Section
+  .why-choose {
+    padding: $spacing-xl 0;
+    
+    .why-choose-content {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+    
+    .differentiators {
+      h2 {
+        font-size: 28px;
+      }
+      
+      .differentiator-item {
+        margin-bottom: $spacing-md;
+        
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  
+  // Attorney Spotlight Section
+  .attorney-spotlight {
+    padding: $spacing-xl 0;
+    
+    .attorney-content {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+    
+    .attorney-bio {
+      padding: $spacing-md;
+      
+      h2 {
+        font-size: 28px;
+      }
+    }
+  }
+  
+  // Contact Section
+  .contact {
+    padding: $spacing-xl 0;
+    
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+    
+    .office-info {
+      h2 {
+        font-size: 28px;
+      }
+      
+      .info-item {
+        margin-bottom: $spacing-sm;
+      }
+    }
+    
+    .contact-form-wrapper {
+      padding: $spacing-md;
+      
+      h3 {
+        font-size: 24px;
+      }
+      
+      form {
+        .form-group {
+          margin-bottom: $spacing-sm;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,57 @@
+// Color Palette
+$mlg-navy: #0b2545;
+$mlg-gold: #d2a649;
+$neutral-light: #f5f6f8;
+$white: #ffffff;
+$charcoal: #333333;
+$error-red: #dc3545;
+$success-green: #28a745;
+
+// Typography
+$font-serif: 'Georgia', 'Times New Roman', serif;
+$font-sans: 'Helvetica Neue', Arial, sans-serif;
+
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-large: 18px;
+$font-size-h1: 48px;
+$font-size-h2: 36px;
+$font-size-h3: 28px;
+$font-size-h4: 24px;
+$font-size-h5: 20px;
+
+$line-height-base: 1.6;
+$line-height-heading: 1.2;
+
+// Responsive Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1440px;
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 40px;
+$spacing-xl: 60px;
+$spacing-xxl: 100px;
+
+// Layout
+$container-max-width: 1200px;
+$content-max-width: 800px;
+
+// Z-index
+$z-navigation: 1000;
+$z-modal: 1100;
+$z-chat-widget: 1000;
+$z-social-bar: 900;
+
+// Transitions
+$transition-fast: 200ms ease;
+$transition-normal: 300ms ease;
+$transition-slow: 500ms ease;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);

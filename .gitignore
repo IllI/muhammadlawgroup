@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+vendor/jquery/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build artifacts (keep compiled CSS)
+# We want to track styles.css since it's the compiled output
+
+# Sass cache
+.sass-cache/
+*.css.map
+*.scss.map

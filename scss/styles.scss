@@ -1,0 +1,194 @@
+// Import variables first
+@import 'variables';
+
+// Import component styles
+@import 'navigation';
+@import 'hero';
+@import 'social-bar';
+@import 'chat-widget';
+@import 'practice-areas';
+@import 'sections';
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-sans;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $charcoal;
+  background-color: $white;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-serif;
+  line-height: $line-height-heading;
+  margin-bottom: $spacing-md;
+  color: $mlg-navy;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $mlg-gold;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: darken($mlg-gold, 10%);
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all $transition-fast;
+  text-decoration: none;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.btn-primary {
+  background-color: $mlg-gold;
+  color: $mlg-navy;
+  border-color: $mlg-gold;
+  
+  &:hover {
+    background-color: darken($mlg-gold, 10%);
+    border-color: darken($mlg-gold, 10%);
+    color: $mlg-navy;
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: $white;
+  border-color: $white;
+  
+  &:hover {
+    background-color: $white;
+    color: $mlg-navy;
+  }
+}
+
+.btn-cta {
+  background-color: $mlg-gold;
+  color: $mlg-navy;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background-color: darken($mlg-gold, 10%);
+    color: $mlg-navy;
+  }
+}
+
+// Form Elements
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: $spacing-sm;
+  font-size: $font-size-base;
+  font-family: $font-sans;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color $transition-fast;
+  
+  &:focus {
+    outline: none;
+    border-color: $mlg-gold;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: $spacing-md;
+  
+  label {
+    display: block;
+    margin-bottom: $spacing-xs;
+    font-weight: 600;
+    color: $charcoal;
+  }
+  
+  .error-message {
+    color: $error-red;
+    font-size: $font-size-small;
+    margin-top: $spacing-xs;
+    display: none;
+    
+    &.active {
+      display: block;
+    }
+  }
+}
+
+// Staging Banner
+.staging-banner {
+  background-color: #ff9800;
+  color: $white;
+  text-align: center;
+  padding: $spacing-sm;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  
+  p {
+    margin: 0;
+  }
+}
+
+// Import utilities last
+@import 'utilities';
+
+// Responsive Typography
+@media (max-width: $breakpoint-mobile) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 20px; }
+  h5 { font-size: 18px; }
+  
+  .container {
+    padding: 0 $spacing-sm;
+  }
+}

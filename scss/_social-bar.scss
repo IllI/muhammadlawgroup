@@ -1,0 +1,46 @@
+// Social Bar Component
+// Fixed vertical pill-shaped bar on the left side with social media links
+
+.social-bar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: $z-social-bar;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  
+  background-color: $mlg-navy;
+  border-radius: 25px;
+  padding: 12px 0;
+  
+  box-shadow: $shadow-md;
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: $white;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: scale(1.1);
+      color: $white;
+    }
+    
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+  }
+  
+  // Hide on mobile viewports
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}

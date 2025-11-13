@@ -1,0 +1,7 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#0b2545"/>
+  <circle cx="400" cy="300" r="100" fill="#d2a649"/>
+  <path d="M 250 500 Q 400 450 550 500 L 550 800 L 250 800 Z" fill="#d2a649"/>
+  <text x="400" y="700" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">Attorney Photo Placeholder</text>
+  <text x="400" y="740" font-family="Arial, sans-serif" font-size="18" fill="#d2a649" text-anchor="middle">Replace with professional headshot</text>
+</svg>

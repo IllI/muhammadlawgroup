@@ -1,0 +1,332 @@
+// Navigation Component Styles
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-color: $mlg-navy;
+  transition: background-color $transition-fast;
+  z-index: $z-navigation;
+  box-shadow: $shadow-md;
+  
+  &.scrolled {
+    background-color: $mlg-navy;
+    box-shadow: $shadow-md;
+  }
+  
+  .container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: $spacing-lg;
+  }
+}
+
+// Logo
+.logo {
+  font-size: $font-size-h4;
+  font-family: $font-serif;
+  font-weight: bold;
+  color: $white;
+  text-decoration: none;
+  transition: color $transition-fast;
+  white-space: nowrap;
+  margin-right: $spacing-lg;
+  
+  &:hover {
+    color: $mlg-gold;
+  }
+}
+
+// Navigation Menu
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: $spacing-sm;
+  flex: 1;
+  justify-content: center;
+  
+  li {
+    position: relative;
+    
+    > a {
+      display: block;
+      padding: $spacing-sm $spacing-xs;
+      color: $white;
+      text-decoration: none;
+      font-size: $font-size-base;
+      transition: color $transition-fast;
+      white-space: nowrap;
+      
+      &:hover {
+        color: $mlg-gold;
+      }
+    }
+    
+    &.has-dropdown {
+      > a::after {
+        content: ' ▾';
+        font-size: 12px;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+// Dropdown Menu
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: $mlg-gold;
+  list-style: none;
+  margin: 0;
+  padding: $spacing-xs 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity $transition-fast, transform $transition-fast, visibility $transition-fast;
+  box-shadow: $shadow-lg;
+  border-radius: 4px;
+  
+  .has-dropdown:hover &,
+  .has-dropdown.active & {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  li {
+    margin: 0;
+    
+    a {
+      display: block;
+      padding: $spacing-sm $spacing-md;
+      color: $mlg-navy;
+      text-decoration: none;
+      font-size: $font-size-base;
+      transition: background-color $transition-fast, color $transition-fast;
+      
+      &:hover {
+        background-color: rgba($mlg-navy, 0.1);
+        color: $mlg-navy;
+      }
+    }
+  }
+}
+
+// Navigation Right Section
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  flex-shrink: 0;
+  margin-left: $spacing-md;
+}
+
+// Phone Block
+.phone-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  .phone-label {
+    font-size: 11px;
+    color: $mlg-gold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .phone-number {
+    font-size: $font-size-base;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+    transition: color $transition-fast;
+    white-space: nowrap;
+    
+    &:hover {
+      color: $mlg-gold;
+    }
+  }
+}
+
+// CTA Button
+.btn-cta {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: $mlg-gold;
+  color: $mlg-navy;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: $font-size-small;
+  border-radius: 4px;
+  transition: background-color $transition-fast, transform $transition-fast;
+  white-space: nowrap;
+  
+  &:hover {
+    background-color: darken($mlg-gold, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+// Mobile Menu Toggle
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: $white;
+    transition: all $transition-fast;
+    border-radius: 2px;
+  }
+  
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+}
+
+// Mobile/Tablet Responsive Styles - Hamburger Menu
+@media (max-width: $breakpoint-tablet) {
+  .navigation {
+    height: 70px;
+    background-color: $mlg-navy;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: $mlg-navy;
+    padding: $spacing-md;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-normal;
+    justify-content: flex-start;
+    
+    &.active {
+      max-height: 100vh;
+      box-shadow: $shadow-lg;
+    }
+    
+    li {
+      border-bottom: 1px solid rgba($white, 0.1);
+      width: 100%;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      > a {
+        padding: $spacing-md $spacing-sm;
+        width: 100%;
+      }
+    }
+  }
+  
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background-color: rgba($mlg-gold, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-normal;
+    box-shadow: none;
+    border-radius: 0;
+    
+    .has-dropdown.active & {
+      max-height: 500px;
+    }
+    
+    li a {
+      padding: $spacing-sm $spacing-lg;
+      color: $white;
+      
+      &:hover {
+        background-color: rgba($mlg-gold, 0.2);
+      }
+    }
+  }
+  
+  .phone-block {
+    display: none;
+  }
+  
+  .btn-cta {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .nav-right {
+    gap: $spacing-sm;
+  }
+}
+
+// Desktop - Full navigation visible
+@media (min-width: 1025px) {
+  .nav-menu {
+    gap: $spacing-md;
+    
+    li > a {
+      padding: $spacing-sm $spacing-sm;
+    }
+  }
+  
+  .phone-block {
+    .phone-label {
+      font-size: $font-size-small;
+    }
+    
+    .phone-number {
+      font-size: $font-size-large;
+    }
+  }
+  
+  .btn-cta {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-base;
+  }
+}
