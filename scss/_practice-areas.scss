@@ -28,7 +28,7 @@
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: $spacing-md;
+  gap: 10px;
   
   // Large desktop - 4 columns
   @media (min-width: 1400px) {
@@ -56,10 +56,11 @@
   background-color: $white;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: $spacing-lg;
+  padding: 20px;
   transition: all $transition-normal;
   display: flex;
   flex-direction: column;
+  max-height: 300px;
   
   &:hover {
     transform: translateY(-5px);
@@ -67,10 +68,23 @@
     border-color: $mlg-gold;
   }
   
+  &.expanded {
+    max-height: none;
+    box-shadow: $shadow-lg;
+    border-color: $mlg-gold;
+    z-index: 10;
+    
+    p {
+      -webkit-line-clamp: unset;
+      max-height: none;
+    }
+  }
+  
   .practice-icon {
     width: 60px;
     height: 60px;
     margin-bottom: $spacing-md;
+    flex-shrink: 0;
     
     img {
       width: 100%;
@@ -84,14 +98,22 @@
     color: $mlg-navy;
     margin-bottom: $spacing-sm;
     font-family: $font-serif;
+    flex-shrink: 0;
   }
   
   p {
     font-size: $font-size-base;
-    line-height: $line-height-base;
+    line-height: 1.5;
     color: $charcoal;
     margin-bottom: $spacing-md;
     flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-height: calc(1.5em * 2); /* 2 lines at 1.5 line-height */
   }
   
   .learn-more {
@@ -102,6 +124,7 @@
     display: inline-flex;
     align-items: center;
     transition: all $transition-fast;
+    flex-shrink: 0;
     
     &:hover {
       color: darken($mlg-gold, 10%);
